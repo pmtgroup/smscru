@@ -26,7 +26,7 @@ module Smscru
         i.response :logger
         i.adapter  Faraday.default_adapter
       end
-      response = connection.post SEND_URL, params
+      response = connection.post SEND_URL, params.merge(options)
 
       JSON.parse(response.body)
     end
