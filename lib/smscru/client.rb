@@ -30,5 +30,14 @@ module Smscru
 
       JSON.parse(response.body)
     end
+
+    def send_voice(text, phones, options={})
+      params = {
+        call: 1,
+        voice: 'w3'
+      }
+      
+      send_message(text, phones, params.merge(options))
+    end
   end
 end
