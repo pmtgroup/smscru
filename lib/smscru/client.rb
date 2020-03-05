@@ -17,6 +17,7 @@ module Smscru
         phones:  Array(phones).join(','),
         login:   config.login,
         psw:     config.password,
+        sender:  'PMTONLINE',
         charset: 'utf-8',
         fmt:     3
       }
