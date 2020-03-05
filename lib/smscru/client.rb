@@ -34,9 +34,10 @@ module Smscru
     def send_voice(text, phones, options={})
       params = {
         call: 1,
-        voice: 'w3'
+        voice: 'w3',
+        param: '30,1800,2'
       }
-      
+
       send_message(text, phones, params.merge(options))
     end
   end
